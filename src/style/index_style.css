@@ -84,12 +84,13 @@ nav {
     align-items: center;
 }
 .nav-links {
-    width: 700px;
+    max-width: 700px;
     height: 80px;
     text-transform: uppercase;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 50px;
 }
 .nav-links li {
     list-style: none;
