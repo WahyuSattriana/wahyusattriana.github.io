@@ -79,6 +79,7 @@ nav {
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .nav-container {
     width: 1100px;
@@ -114,6 +115,16 @@ nav {
     height: 80px;
     align-items: center;
     padding: 0 15px;
+}
+.burger {
+    display: none;
+}
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #212738;
+    margin: 6px;
+    transition: all 0.3s ease;
 }
 
 /* landing-page */
@@ -332,4 +343,166 @@ a.dark-button:hover {
         align-items: center;
         gap: 20px;
     }
+}
+@media screen and (max-width:680px) {
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 10vh;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15vh;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+    header .landing-text {
+        max-width: 410px;
+        margin-top: -90px;
+        margin-left: 70px;
+        align-self: center;
+    }
+    .landing-text h1 {
+        line-height: 35px;
+        font-size: 40px;
+    }
+    .landing-text p {
+        font-size: 15px;
+    }
+    .landing-text span {
+        background: linear-gradient(#B76B68, #B76B68);
+        background-size: auto 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #FFFFFF;
+    }
+    .session-container {
+        flex-direction: column;
+        max-width: 400px;
+        align-items: center;
+        overflow: hidden;
+        gap: 6vh;
+    }
+    .session-text {
+        max-width: 100%;
+        order: 2;
+    }
+    .session-image {
+        margin: 0px;
+    }
+    .righten .session-text {
+        order: 2;
+        text-align: start;
+    }
+    .righten .session-title {
+        align-self: flex-start;
+    }
+
+    .session-container .skills {
+        max-width: 100%;
+    }
+    .skills h2 {
+        font-size: 16px;
+    }
+    .skills .outerload {
+        width: 100%;
+    }
+}
+@media screen and (max-width:450px) {
+    h1 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 12px;
+    }
+    header .landing-text {
+        max-width: 280px;
+        margin-top: -90px;
+        margin-left: 30px;
+    }
+    .landing-text h1 {
+        line-height: 26px;
+        font-size: 30px;
+    }
+    .landing-text p {
+        font-size: 12px;
+    }
+    .landing-text span {
+        background: linear-gradient(#B76B68, #B76B68);
+        background-size: auto 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #FFFFFF;
+    }
+    .session-container {
+        flex-direction: column;
+        max-width: 350px;
+        align-items: center;
+        overflow: hidden;
+        gap: 6vh;
+    }
+    .session-text {
+        max-width: 100%;
+        order: 2;
+    }
+}
+@media screen and (max-width:380px) {
+    h1 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 12px;
+    }
+    header .landing-text {
+        margin-top: -53px;
+    }
+    .landing-text h1 {
+        line-height: 20px;
+        font-size: 20px;
+    }
+    .landing-text p {
+        font-size: 11px;
+    }
+    .landing-text span {
+        background: linear-gradient(#B76B68, #B76B68);
+        background-size: auto 19px;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #FFFFFF;
+    }
+    .session-container {
+        max-width: 300px;
+    }
+}
+.nav-active {
+    transform: translateX(0%);
+}
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
 }
