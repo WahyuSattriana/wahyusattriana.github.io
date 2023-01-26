@@ -33,6 +33,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     gap: 50px;
+    z-index: 99999;
 }
 .nav-links li {
     list-style: none;
