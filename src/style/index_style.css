@@ -11,7 +11,7 @@ header {
     max-width: 1349px;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 header .landing-img {
     width: 100vw;
